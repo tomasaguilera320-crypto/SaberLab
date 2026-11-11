@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaberLAB | Profesores</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body { font-family: Arial, sans-serif; background: #FFF5F9; color: #24364B; line-height: 1.65; }
+    a { text-decoration: none; }
+
+    header { background: #FFFFFF; border-bottom: 3px solid #FFE5D4; padding: 14px 22px; display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    .marca img { height: 64px; width: auto; display: block; }
+
+    nav { display: flex; gap: 8px; flex-wrap: wrap; }
+    nav a { color: #24364B; padding: 9px 12px; border-radius: 9px; font-size: 15px; font-weight: 700; }
+    nav a:hover, nav a.actual { background: #EAF4FF; color: #244F83; }
+
+    .portada { background: #EAF4FF; text-align: center; padding: 62px 20px; }
+    .etiqueta { display: inline-block; background: #FFF4CC; color: #66521B; padding: 7px 14px; border-radius: 20px; font-size: 14px; font-weight: 700; margin-bottom: 16px; }
+    h1 { color: #244F83; font-size: clamp(34px, 6vw, 52px); line-height: 1.15; margin-bottom: 18px; }
+    .portada p { max-width: 740px; margin: 0 auto; font-size: 19px; }
+
+    .boton { display: inline-block; margin-top: 25px; background: #244F83; color: #FFFFFF; padding: 13px 22px; border-radius: 12px; font-weight: 700; }
+    .boton:hover { background: #18385F; }
+
+    main { width: min(1050px, 92%); margin: 0 auto; }
+    section { padding: 48px 0; }
+    h2 { color: #244F83; font-size: 30px; margin-bottom: 12px; }
+    .introduccion { max-width: 820px; font-size: 17px; }
+
+    .rejilla { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 24px; }
+    .tarjeta { background: #FFFFFF; border: 2px solid #EAF4FF; border-radius: 16px; padding: 22px; box-shadow: 0 5px 16px rgba(36, 79, 131, 0.07); }
+    .icono { font-size: 30px; margin-bottom: 8px; }
+    .tarjeta h3 { color: #244F83; font-size: 20px; margin-bottom: 8px; }
+
+    .pasos { counter-reset: paso; display: grid; gap: 14px; margin-top: 22px; }
+    .paso { counter-increment: paso; background: #FFFFFF; border-left: 5px solid #D9701C; border-radius: 12px; padding: 18px 20px; }
+    .paso h3 { color: #244F83; margin-bottom: 5px; }
+    .paso h3::before { content: counter(paso) ". "; color: #D9701C; }
+
+    .nota { margin-top: 18px; background: #FFE5D4; border-left: 5px solid #D9701C; padding: 15px 18px; border-radius: 8px; }
+
+    .volver { text-align: center; padding: 12px 0 55px; }
+
+    footer { background: #244F83; color: #FFFFFF; text-align: center; padding: 28px 22px; font-size: 14px; }
+    .logo-pie { background: #FFFFFF; display: inline-block; padding: 8px 18px; border-radius: 14px; margin-bottom: 12px; }
+    .logo-pie img { height: 80px; width: auto; display: block; }
+
+    @media (max-width: 600px) {
+      header { justify-content: center; }
+      nav { justify-content: center; }
+      .portada { padding: 46px 18px; }
+      .portada p { font-size: 17px; }
+      h2 { font-size: 26px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a class="marca" href="index.html">
+      <img src="SaberLAB.png" alt="Logo de SaberLAB">
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="estudiante.html">Estudiante</a>
+      <a class="actual" href="profesor.html">Profesor</a>
+      <a href="admin.html">Admin</a>
+      <a href="proposito.html">Nuestro propósito</a>
+    </nav>
+  </header>
+
+  <div class="portada">
+    <span class="etiqueta">El profesor comparte y orienta</span>
+    <h1>Prepara materiales para que el aprendizaje llegue más lejos</h1>
+    <p>
+      SaberLAB está pensada para que los profesores vinculados a una institución
+      puedan organizar y compartir materiales con sus estudiantes.
+    </p>
+    <a class="boton" href="#que-puede-hacer">Conoce el rol del profesor</a>
+  </div>
+
+  <main>
+    <section id="que-puede-hacer">
+      <h2>¿Qué puede hacer el profesor?</h2>
+      <p class="introduccion">
+        El profesor puede preparar contenidos de acuerdo con los grados y las
+        materias que ofrece la institución, para apoyar el estudio dentro y
+        fuera del aula.
+      </p>
+
+      <div class="rejilla">
+        <article class="tarjeta">
+          <div class="icono" aria-hidden="true">📖</div>
+          <h3>Compartir contenidos</h3>
+          <p>Puede escribir explicaciones e información para que los estudiantes las consulten.</p>
+        </article>
+
+        <article class="tarjeta">
+          <div class="icono" aria-hidden="true">📝</div>
+          <h3>Proponer tareas y trabajos</h3>
+          <p>Puede organizar actividades y trabajos relacionados con los temas de la clase.</p>
+        </article>
+
+        <article class="tarjeta">
+          <div class="icono" aria-hidden="true">🖼️</div>
+          <h3>Usar distintos recursos</h3>
+          <p>Los materiales pueden incluir imágenes, videos y archivos, además de texto.</p>
+        </article>
+
+        <article class="tarjeta">
+          <div class="icono" aria-hidden="true">🎯</div>
+          <h3>Organizar por grado y materia</h3>
+          <p>Los contenidos se preparan para el grado y las materias disponibles en la institución.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>¿Cómo sería el proceso?</h2>
+      <p class="introduccion">
+        La idea es que el material se prepare y se comparta siguiendo estos pasos:
+      </p>
+
+      <div class="pasos">
+        <article class="paso">
+          <h3>Elegir el grado y la materia</h3>
+          <p>El profesor organiza el contenido según el grupo al que está dirigido.</p>
+        </article>
+
+        <article class="paso">
+          <h3>Preparar el material</h3>
+          <p>Puede escribir la información o incluir recursos como imágenes, videos y archivos.</p>
+        </article>
+
+        <article class="paso">
+          <h3>Compartirlo cuando tenga conexión</h3>
+          <p>Para que los estudiantes reciban nuevos contenidos, el dispositivo debe conectarse a internet.</p>
+        </article>
+
+        <article class="paso">
+          <h3>Permitir que los estudiantes lo consulten</h3>
+          <p>Una vez que tengan el material disponible en su aplicación, podrán revisarlo incluso sin conexión.</p>
+        </article>
+      </div>
+
+      <div class="nota">
+        <strong>Importante:</strong> los estudiantes necesitan conectarse a internet
+        para recibir o descargar los nuevos materiales que publique el profesor.
+        El uso sin conexión aplica a los contenidos que ya tengan disponibles en
+        su dispositivo.
+      </div>
+    </section>
+
+    <section>
+      <h2>Una herramienta vinculada a la institución</h2>
+      <p class="introduccion">
+        SaberLAB se plantea como un apoyo para una institución educativa y sus
+        profesores. La institución define las materias disponibles, y el
+        profesor prepara los recursos que considere útiles para acompañar el
+        aprendizaje de sus estudiantes.
+      </p>
+    </section>
+
+    <div class="volver">
+      <a class="boton" href="index.html">Volver al inicio</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="logo-pie"><img src="SaberLAB.png" alt="Logo de SaberLAB"></div>
+    <br>
+    SaberLAB · Recursos educativos para aprender en más lugares
+  </footer>
+</body>
+</html>

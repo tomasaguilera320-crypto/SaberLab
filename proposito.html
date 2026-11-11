@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaberLAB | Nuestro propósito</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #FFF5F9;
+      color: #24364B;
+      line-height: 1.65;
+    }
+
+    a { text-decoration: none; }
+
+    header {
+      background: #FFFFFF;
+      border-bottom: 3px solid #FFE5D4;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .marca img {
+      height: 64px;
+      width: auto;
+      display: block;
+    }
+
+    nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #24364B;
+      padding: 9px 12px;
+      border-radius: 9px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    nav a:hover,
+    nav a.actual {
+      background: #EAF4FF;
+      color: #244F83;
+    }
+
+    .portada {
+      background: #EAF4FF;
+      text-align: center;
+      padding: 68px 20px;
+    }
+
+    .etiqueta {
+      display: inline-block;
+      background: #FFE5D4;
+      color: #8A4310;
+      padding: 7px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      color: #244F83;
+      font-size: clamp(35px, 6vw, 54px);
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .portada p {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 19px;
+    }
+
+    main {
+      width: min(1050px, 92%);
+      margin: 0 auto;
+    }
+
+    section { padding: 48px 0; }
+
+    h2 {
+      color: #244F83;
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .introduccion {
+      max-width: 850px;
+      font-size: 17px;
+    }
+
+    .tarjetas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .tarjeta {
+      background: #FFFFFF;
+      border: 2px solid #EAF4FF;
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 5px 16px rgba(36, 79, 131, 0.07);
+    }
+
+    .icono {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .tarjeta h3 {
+      color: #244F83;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .historia {
+      background: #FFF4CC;
+      border-radius: 18px;
+      padding: 28px;
+    }
+
+    .historia h2 { margin-bottom: 14px; }
+
+    .meta {
+      background: #E8F8E8;
+      border-left: 5px solid #3E9B5A;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .volver {
+      text-align: center;
+      padding: 12px 0 55px;
+    }
+
+    .boton {
+      display: inline-block;
+      margin-top: 20px;
+      background: #244F83;
+      color: #FFFFFF;
+      padding: 13px 22px;
+      border-radius: 12px;
+      font-weight: 700;
+    }
+
+    .boton:hover { background: #18385F; }
+
+    footer {
+      background: #244F83;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 28px 22px;
+      font-size: 14px;
+    }
+
+    .logo-pie {
+      background: #FFFFFF;
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 14px;
+      margin-bottom: 12px;
+    }
+
+    .logo-pie img {
+      height: 80px;
+      width: auto;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      header { justify-content: center; }
+      nav { justify-content: center; }
+      .portada { padding: 48px 18px; }
+      .portada p { font-size: 17px; }
+      h2 { font-size: 26px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a class="marca" href="index.html">
+      <img src="SaberLAB.png" alt="Logo de SaberLAB">
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="estudiante.html">Estudiante</a>
+      <a href="profesor.html">Profesor</a>
+      <a href="admin.html">Admin</a>
+      <a class="actual" href="proposito.html">Nuestro propósito</a>
+    </nav>
+  </header>
+
+  <div class="portada">
+    <span class="etiqueta">Aprender sin tantas barreras</span>
+    <h1>Nuestro propósito</h1>
+    <p>
+      Queremos ayudar a que más personas puedan aprender, aunque vivan lejos
+      de una institución o no tengan conexión constante a internet.
+    </p>
+  </div>
+
+  <main>
+    <section>
+      <h2>¿Por qué nació SaberLAB?</h2>
+      <div class="historia">
+        <p>
+          SaberLAB nació como una propuesta para apoyar a estudiantes que viven
+          en veredas o fincas, que tienen dificultades para asistir al colegio
+          con frecuencia o que no siempre cuentan con electricidad e internet.
+        </p>
+        <br>
+        <p>
+          La aplicación busca vincularse con una institución educativa para que
+          sus profesores puedan preparar y compartir materiales, actividades,
+          tareas y otros recursos de aprendizaje.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>¿A quiénes queremos ayudar?</h2>
+      <p class="introduccion">
+        La propuesta está enfocada actualmente en estudiantes de sexto a once,
+        y en las materias que ofrezca la institución vinculada. También busca
+        que, con el tiempo, pueda servir a más personas que quieran aprender
+        algo nuevo o recordar lo que ya estudiaron.
+      </p>
+
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <div class="icono" aria-hidden="true">🌱</div>
+          <h3>Estudiantes de zonas rurales</h3>
+          <p>Apoyar a quienes viven en veredas o fincas y pueden tener dificultades para llegar al colegio.</p>
+        </article>
+
+        <article class="tarjeta">
+          <div class="icono" aria-hidden="true">📶</div>
+          <h3>Personas con conexión limitada</h3>
+          <p>Facilitar la consulta de los materiales que ya se hayan descargado, aunque no haya conexión en ese momento.</p>
+        </article>
+
+        <article class="tarjeta">
+          <div class="icono" aria-hidden="true">📚</div>
+          <h3>Personas que quieren aprender</h3>
+          <p>Ofrecer una propuesta que pueda crecer y apoyar a quienes quieran aprender o repasar distintos temas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>¿Cómo ayuda la aplicación?</h2>
+      <p class="introduccion">
+        Los profesores pueden compartir contenidos y recursos cuando tienen
+        conexión a internet. Después de descargarlos, los estudiantes pueden
+        consultarlos desde la aplicación sin conexión. Para recibir nuevos
+        materiales, sí tendrán que conectarse a internet y descargarlos.
+      </p>
+
+      <div class="meta">
+        <strong>Lo que queremos lograr:</strong> que la distancia, la falta de
+        internet constante o las dificultades para asistir a clases no sean
+        una barrera tan grande para seguir aprendiendo.
+      </div>
+    </section>
+
+    <div class="volver">
+      <a class="boton" href="index.html">Volver al inicio</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="logo-pie">
+      <img src="SaberLAB.png" alt="Logo de SaberLAB">
+    </div>
+    <br>
+    SaberLAB · Aprender en más lugares y circunstancias
+  </footer>
+</body>
+</html>
